@@ -22,7 +22,8 @@ const Contact: React.FC = () => {
     };
   
     try {
-      const response = await fetch("http://localhost:5000/send-email", {
+      const response = await fetch(`${import.meta.env.VITE_BACKENDURL}/send-email`, {
+
         method: "POST",
         headers: {
           "Content-Type": "application/json",
