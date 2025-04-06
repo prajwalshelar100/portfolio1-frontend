@@ -50,13 +50,13 @@ const Footer: React.FC = () => {
             <div>
               <h4 className="font-semibold mb-3">Connect</h4>
               <div className="flex space-x-4">
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <a href="https://github.com/prajwalshelar100" className="text-gray-300 hover:text-white transition-colors">
                   <Github size={20} />
                 </a>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <a href="https://linkedin.com/in/prajwalshelar" className="text-gray-300 hover:text-white transition-colors">
                   <Linkedin size={20} />
                 </a>
-                <a href="mailto:example@email.com" className="text-gray-300 hover:text-white transition-colors">
+                <a href="mailto:shelar.prajwal.99@gmail.com" className="text-gray-300 hover:text-white transition-colors">
                   <Mail size={20} />
                 </a>
               </div>
