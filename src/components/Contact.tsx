@@ -35,7 +35,7 @@ const Contact: React.FC = () => {
       });
   
       if (response.ok) {
-        toast.success("✅ Message sent successfully!");
+        toast.success("Message sent successfully!");
         form.reset();
       } else {
         const errorData = await response.json();
