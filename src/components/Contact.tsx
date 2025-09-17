@@ -75,19 +75,7 @@ const Contact: React.FC = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-md">
-              <CardContent className="p-6">
-                <div className="flex items-center space-x-4">
-                  <div className="bg-java/10 p-3 rounded-full">
-                    <Phone className="h-6 w-6 text-java" />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-medium text-gray-500">Phone</h4>
-                    <p className="text-lg font-semibold text-java-dark">+91 9987909499</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+          
 
             <Card className="shadow-md">
               <CardContent className="p-6">
