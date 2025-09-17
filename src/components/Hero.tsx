@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ChevronDown, Github, Linkedin, Mail, Phone } from 'lucide-react';
+import { ChevronDown, Code, Github, Linkedin, Mail } from 'lucide-react';
 import { Typewriter } from 'react-simple-typewriter';
 
 const Hero: React.FC = () => {
@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
 
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
             Prajwal Shelar <br />
-            <span className="text-java font-semibold block min-h-[30px] min-w-[240px]  text-3xl md:text-4xl mt-4">
+            <span className="text-java font-semibold block min-h-[30px] min-w-[240px] text-3xl md:text-4xl mt-4">
               <Typewriter
                 words={[
                   'Aspiring Software Developer',
@@ -37,9 +37,8 @@ const Hero: React.FC = () => {
             </span>
           </h1>
 
-
           <p className="text-gray-600 text-lg mb-8 max-w-xl">
-          I specialize in Java development with a strong command of Spring Boot, RESTful APIs, and Microservices. I'm committed to building efficient, scalable backend systems and continuously enhancing my expertise by working with complementary technologies such as Docker, Rust, and Go.
+            I specialize in Java development with a strong command of Spring Boot, RESTful APIs, and Microservices. I'm committed to building efficient, scalable backend systems and continuously enhancing my expertise by working with complementary technologies such as Docker, Rust, and Go.
           </p>
 
           <div className="flex flex-wrap gap-4 mb-8">
@@ -51,35 +50,65 @@ const Hero: React.FC = () => {
             </Button>
           </div>
 
-          <div className="flex space-x-4">
-            <a
-              href="https://github.com/prajwalshelar100"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-java transition-colors"
-            >
-              <Github size={24} />
-            </a>
-            <a
-              href="https://linkedin.com/in/prajwalshelar"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-java transition-colors"
-            >
-              <Linkedin size={24} />
-            </a>
-            <a
-              href="mailto:shelar.prajwal.99@gmail.com"
-              className="text-gray-600 hover:text-java transition-colors"
-            >
-              <Mail size={24} />
-            </a>
-            <a
-              href="tel:+919987909499"
-              className="text-gray-600 hover:text-java transition-colors"
-            >
-              <Phone size={24} />
-            </a>
+          {/* Social Links with Tooltips */}
+          <div className="flex space-x-6">
+            {/* GitHub */}
+            <div className="relative group inline-block">
+              <a
+                href="https://github.com/prajwalshelar100"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-java transition-colors"
+              >
+                <Github size={24} />
+              </a>
+              <span className="absolute left-1/2 -translate-x-1/2 mt-2 px-2 py-1 text-xs text-white bg-gray-900 rounded-md opacity-0 group-hover:opacity-100 transition-opacity">
+                GitHub Profile 
+              </span>
+            </div>
+
+            {/* LinkedIn */}
+            <div className="relative group inline-block">
+              <a
+                href="https://linkedin.com/in/prajwalshelar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-java transition-colors"
+              >
+                <Linkedin size={24} />
+              </a>
+              <span className="absolute left-1/2 -translate-x-1/2 mt-2 px-2 py-1 text-xs text-white bg-gray-900 rounded-md opacity-0 group-hover:opacity-100 transition-opacity">
+                LinkedIn Profile
+              </span>
+            </div>
+
+            {/* Email */}
+            <div className="relative group inline-block">
+              <a
+                href="mailto:shelar.prajwal.99@gmail.com"
+                className="text-gray-600 hover:text-java transition-colors"
+              >
+                <Mail size={24} />
+              </a>
+              <span className="absolute left-1/2 -translate-x-1/2 mt-2 px-2 py-1 text-xs text-white bg-gray-900 rounded-md opacity-0 group-hover:opacity-100 transition-opacity">
+                Email
+              </span>
+            </div>
+
+            {/* LeetCode */}
+            <div className="relative group inline-block">
+              <a
+                href="https://leetcode.com/u/prajwalshelar/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-java transition-colors"
+              >
+                <Code size={24} />
+              </a>
+              <span className="absolute left-1/2 -translate-x-1/2 mt-2 px-2 py-1 text-xs text-white bg-gray-900 rounded-md opacity-0 group-hover:opacity-100 transition-opacity">
+                LeetCode Profile 
+              </span>
+            </div>
           </div>
         </div>
 
