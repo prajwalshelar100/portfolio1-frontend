@@ -66,7 +66,8 @@ const Footer: React.FC = () => {
         
         <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} All Rights Reserved
+            &copy; {new Date().getFullYear()} Prajwal Shelar
+
           </p>
           
           <button 
