@@ -93,51 +93,92 @@ const Contact: React.FC = () => {
           </div>
           
           <div>
-  <Card className="shadow-md">
-    <CardContent className="p-6 text-center space-y-6">
-      <h3 className="text-xl font-semibold text-java-dark">
-        Contact Me
-      </h3>
-
-      <p className="text-gray-600">
-        For job opportunities, freelance work, or collaborations,
-        feel free to reach out directly.
-      </p>
-
-      {/* EMAIL BUTTON */}
-      <Button
-        className="w-full bg-java hover:bg-java-dark"
-        onClick={() =>
-          window.location.href =
-            "mailto:shelar.prajwal.99@gmail.com?subject=Opportunity%20Discussion"
-        }
-      >
-        <Mail className="h-4 w-4 mr-2" />
-        Email Me
-      </Button>
-
-      {/* WHATSAPP BUTTON */}
-      <Button
-        variant="outline"
-        className="w-full border-green-500 text-green-600 hover:bg-green-50"
-        onClick={() =>
-          window.open(
-            "https://wa.me/919987009499?text=Hi%20Prajwal,%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect.",
-            "_blank"
-          )
-        }
-      >
-        <Phone className="h-4 w-4 mr-2" />
-        WhatsApp Me
-      </Button>
-
-      <p className="text-xs text-gray-500">
-        Email is preferred for formal communication.
-      </p>
-    </CardContent>
-  </Card>
-</div>
-
+            <Card className="shadow-md">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold text-java-dark mb-4">Send Me a Message</h3>
+                <form onSubmit={handleSubmit}>
+                  <div className="space-y-4">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                        Your Name
+                      </label>
+                      <Input
+                        id="name"
+                        name="name" 
+                        type="text"
+                        placeholder="John Doe"
+                        className="w-full"
+                        required
+                        disabled={isSubmitting}
+                      />
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                        Your Email
+                      </label>
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="john@example.com"
+                        className="w-full"
+                        required
+                        disabled={isSubmitting}
+                      />
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+                        Subject
+                      </label>
+                      <Input
+                        id="subject"
+                        name="subject"
+                        type="text"
+                        placeholder="Job Opportunity"
+                        className="w-full"
+                        required
+                        disabled={isSubmitting}
+                      />
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                        Message
+                      </label>
+                      <Textarea
+                        id="message"
+                        name="message"
+                        placeholder="Your message here..."
+                        className="w-full min-h-[120px]"
+                        required
+                        disabled={isSubmitting}
+                      />
+                    </div>
+                    
+                    <Button 
+                      type="submit" 
+                      className="w-full bg-java hover:bg-java-dark"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          <Send className="h-4 w-4 mr-2" />
+                          Send Message
+                        </>
+                      )}
+                    </Button>
+                  </div>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </section>
