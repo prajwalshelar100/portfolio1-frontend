@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
                 </a>
               ))}
               <a
-                href="/PrajwalShelar-resume.pdf"
+                href="/PrajwalShelar-resume2026.pdf"
                 download
                 className="px-4 py-2 rounded-md bg-java hover:bg-java-dark text-white text-sm font-medium transition-colors">
                 Resume
@@ -95,7 +95,7 @@ const Navbar: React.FC = () => {
               </a>
             ))}
             <a
-              href="/PrajwalShelar-resume.pdf"
+              href="/PrajwalShelar-resume2026.pdf"
               download
               className="block w-full text-center mt-2 px-4 py-2 rounded-md bg-java hover:bg-java-dark text-white text-base font-medium"
               onClick={() => setIsOpen(false)}
